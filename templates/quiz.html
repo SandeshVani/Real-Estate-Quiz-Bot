@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Quiz - Real Estate Quiz Bot{% endblock %}
+
+{% block content %}
+<div class="container quiz-container">
+    <div class="quiz-header">
+        <h1>📝 Real Estate Knowledge Quiz</h1>
+        <div class="score-display">
+            <span>Score: <strong id="score">0</strong>/<strong id="total">0</strong></span>
+            <span id="percentage"></span>
+        </div>
+    </div>
+
+    <!-- Loading State -->
+    <div id="loading-state" class="quiz-state">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">⏳ Generating question with AI...</p>
+    </div>
+
+    <!-- Question State -->
+    <div id="question-state" class="quiz-state" style="display: none;">
+        <div class="question-card">
+            <div class="question-header">
+                <span id="question-number" class="question-badge"></span>
+            </div>
+            
+            <h2 id="question-text" class="question-text"></h2>
+            
+            <div id="options-container" class="options-list"></div>
+            
+            <button id="submit-btn" class="btn-primary btn-full" onclick="submitAnswer()" disabled>
+                Submit Answer
+            </button>
+        </div>
+    </div>
+
+    <!-- Feedback State -->
+    <div id="feedback-state" class="quiz-state" style="display: none;">
+        <div id="feedback-card" class="feedback-card">
+            <h2 id="feedback-title" class="feedback-title"></h2>
+            <p id="feedback-message" class="feedback-message"></p>
+            <div id="explanation-box" class="explanation-box"></div>
+        </div>
+        
+        <button id="next-btn" class="btn-primary btn-full" onclick="nextQuestion()">
+            <span id="next-btn-text">Next Question →</span>
+        </button>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}

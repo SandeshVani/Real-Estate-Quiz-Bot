@@ -1,0 +1,61 @@
+[
+  {
+    "id": "PROP001",
+    "title": "Downtown Luxury Condo",
+    "type": "Condominium",
+    "price": 450000,
+    "location": "Downtown District",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "sqft": 1200,
+    "year_built": 2020,
+    "description": "Modern luxury condo featuring floor-to-ceiling windows, gourmet kitchen with stainless steel appliances, hardwood floors throughout, and building amenities including fitness center, rooftop terrace, and 24/7 concierge service.",
+    "features": ["Hardwood Floors", "Stainless Steel Appliances", "Floor-to-Ceiling Windows", "Fitness Center", "Rooftop Terrace", "24/7 Concierge"],
+    "hoa_fee": 350,
+    "property_tax": 6200
+  },
+  {
+    "id": "PROP002",
+    "title": "Suburban Family Home",
+    "type": "Single Family Home",
+    "price": 625000,
+    "location": "Maple Ridge Subdivision",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "sqft": 2500,
+    "year_built": 2015,
+    "description": "Spacious family home in sought-after school district. Open floor plan with updated kitchen, master suite with walk-in closet, finished basement, and large backyard with deck. Two-car garage and close to parks.",
+    "features": ["Open Floor Plan", "Updated Kitchen", "Master Suite", "Finished Basement", "Large Backyard", "Two-Car Garage"],
+    "property_tax": 8500
+  },
+  {
+    "id": "PROP003",
+    "title": "Investment Duplex",
+    "type": "Multi-Family",
+    "price": 380000,
+    "location": "Riverside District",
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "sqft": 1800,
+    "year_built": 2010,
+    "description": "Excellent investment opportunity! Well-maintained duplex with separate utilities, off-street parking, and long-term tenants in place. Each unit features updated kitchens and bathrooms. Strong rental history with positive cash flow.",
+    "features": ["Separate Utilities", "Updated Kitchens", "Off-Street Parking", "Tenanted", "Positive Cash Flow"],
+    "monthly_rental_income": 3200,
+    "property_tax": 5100
+  },
+  {
+    "id": "PROP004",
+    "title": "Beachfront Villa",
+    "type": "Villa",
+    "price": 1250000,
+    "location": "Oceanview Estates",
+    "bedrooms": 5,
+    "bathrooms": 4,
+    "sqft": 3800,
+    "year_built": 2018,
+    "description": "Stunning beachfront property with panoramic ocean views. Features include infinity pool, outdoor kitchen, home theater, smart home automation, and private beach access. Perfect for luxury living or vacation rental.",
+    "features": ["Ocean View", "Infinity Pool", "Smart Home", "Home Theater", "Private Beach Access", "Outdoor Kitchen"],
+    "hoa_fee": 850,
+    "property_tax": 18500
+  }
+]

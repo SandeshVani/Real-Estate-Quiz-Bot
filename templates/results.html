@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Results - Real Estate Quiz Bot{% endblock %}
+
+{% block content %}
+<div class="container results-container">
+    <div class="results-card">
+        <h1 class="results-title">🎯 Quiz Complete!</h1>
+        
+        <div class="results-score">
+            <div class="score-circle">
+                <div class="score-number">{{ percentage }}%</div>
+                <div class="score-label">{{ score }}/{{ total }}</div>
+            </div>
+        </div>
+        
+        <p class="results-message">{{ message }}</p>
+        
+        <div class="results-actions">
+            <a href="/quiz" class="btn-primary">Take Another Quiz</a>
+            <a href="/" class="btn-secondary">Back to Home</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Real Estate Quiz Bot{% endblock %}
+
+{% block content %}
+<div class="container">
+    <header class="hero">
+        <h1>🏠 Real Estate Quiz Bot</h1>
+        <p class="hero-subtitle">Master real estate concepts with AI-powered questions</p>
+        <p class="hero-description">Study the properties below, then test your knowledge!</p>
+    </header>
+
+    <section class="properties-section">
+        <h2 class="section-title">📋 Property Listings</h2>
+        <p class="section-subtitle">Review these properties before taking the quiz</p>
+        
+        <div class="properties-grid">
+            {% for property in properties %}
+            <div class="property-card">
+                <div class="property-header">
+                    <h3 class="property-title">{{ property.title }}</h3>
+                    <span class="property-badge">{{ property.type }}</span>
+                </div>
+                
+                <div class="property-price">${{ "{:,}".format(property.price) }}</div>
+                
+                <div class="property-location">
+                    <span class="icon">📍</span>
+                    {{ property.location }}
+                </div>
+                
+                <div class="property-stats">
+                    <div class="stat">
+                        <span class="stat-icon">🛏️</span>
+                        <span>{{ property.bedrooms }} Beds</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-icon">🚿</span>
+                        <span>{{ property.bathrooms }} Baths</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-icon">📏</span>
+                        <span>{{ property.sqft }} sqft</span>
+                    </div>
+                </div>
+                
+                <p class="property-description">{{ property.description }}</p>
+                
+                <div class="property-details">
+                    <div class="detail-item">
+                        <strong>Year Built:</strong> {{ property.year_built }}
+                    </div>
+                    {% if property.hoa_fee %}
+                    <div class="detail-item">
+                        <strong>HOA Fee:</strong> ${{ property.hoa_fee }}/month
+                    </div>
+                    {% endif %}
+                    {% if property.monthly_rental_income %}
+                    <div class="detail-item">
+                        <strong>Rental Income:</strong> ${{ property.monthly_rental_income }}/month
+                    </div>
+                    {% endif %}
+                    <div class="detail-item">
+                        <strong>Property Tax:</strong> ${{ "{:,}".format(property.property_tax) }}/year
+                    </div>
+                </div>
+                
+                <div class="property-features">
+                    {% for feature in property.features %}
+                    <span class="feature-tag">{{ feature }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <div class="cta-section">
+        <a href="/quiz" class="btn-primary btn-large">
+            Start Quiz 🚀
+        </a>
+        <p class="cta-text">5 AI-generated questions • Detailed explanations • Instant feedback</p>
+    </div>
+</div>
+{% endblock %}
